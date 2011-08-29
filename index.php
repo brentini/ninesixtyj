@@ -7,7 +7,7 @@ $templatePath = $this->baseurl.'/templates/'.$this->template; // template path
 
 // get the site name
 $config		= JFactory::getConfig();
-$siteName	= $config->getValue('config.sitename');
+$siteName	= $config->get('config.sitename');
 
 // determine which positions we want to show
 $showLeftPosition	= $this->countModules('left');
