@@ -13,11 +13,16 @@ $siteName	= $config->getValue('config.sitename');
 $showLeftPosition	= $this->countModules('left');
 $showRightPosition  = $this->countModules('right');
 $showTopPosition    = $this->countModules('top');
+$showTopPosition    = $this->countModules('topmenu');
+$showUser1User2User3Positions = $this->countModules('user1 or user2 or user3');
+$showUser1Position  = $this->countModules('user1');
+$showUser2Position  = $this->countModules('user2');
+$showUser3Position  = $this->countModules('user3');
 $showUser4User5User5Positions = $this->countModules('user4 or user5 or user6');
 $showUser4Position  = $this->countModules('user4');
 $showUser5Position  = $this->countModules('user5');
 $showUser6Position  = $this->countModules('user6');
-$showUser7Position  = $this->countModules('user7');
+$showFooterPosition  = $this->countModules('footer');
 
 // Set Container and Grid to grid-12 or grid-16
 $GridContainer = 12;
@@ -77,6 +82,35 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
         </div>
     </div>
 
+  <!-- ***************** user 1,2,3 *************** -->
+    <div id="userbottom-wrapper">
+        <div class="userbottom-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
+            <?php if ($showUser1User2User3Positions) : ?>
+            <div class="grid-4">
+                <?php if ($showUser1Position) : ?>
+                <jdoc:include type="modules" name="user1" style="box" />
+                <?php else : ?>
+                &nbsp;
+            <?php endif; ?>
+            </div>
+            <div class="grid-4">
+                <?php if ($showUser2Position) : ?>
+                <jdoc:include type="modules" name="user2" style="box" />
+                <?php else : ?>
+                &nbsp;
+                <?php endif; ?>
+            </div>
+            <div class="grid-4">
+                <?php if ($showUser3Position) : ?>
+                <jdoc:include type="modules" name="user3" style="box" />
+                <?php else : ?>
+                &nbsp;
+                <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+
   <!-- ***************** main *************** -->
     <div id="main-wrapper">
         <div class="main-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
@@ -102,26 +136,26 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
     </div>
 
     <!-- ***************** user 4,5,6 *************** -->
-    <div id="user-wrapper">
-        <div class="user-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
+    <div id="userbottom-wrapper">
+        <div class="userbottom-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
             <?php if ($showUser4User5User6Positions) : ?>
             <div class="grid-4">
                 <?php if ($showUser4Position) : ?>
-                <jdoc:include type="modules" name="user1" style="box" />
+                <jdoc:include type="modules" name="user4" style="box" />
                 <?php else : ?>
                 &nbsp;
             <?php endif; ?>
             </div>
             <div class="grid-4">
                 <?php if ($showUser5Position) : ?>
-                <jdoc:include type="modules" name="user2" style="box" />
+                <jdoc:include type="modules" name="user5" style="box" />
                 <?php else : ?>
                 &nbsp;
                 <?php endif; ?>
             </div>
             <div class="grid-4">
                 <?php if ($showUser6Position) : ?>
-                <jdoc:include type="modules" name="user3" style="box" />
+                <jdoc:include type="modules" name="user6" style="box" />
                 <?php else : ?>
                 &nbsp;
                 <?php endif; ?>
@@ -130,12 +164,15 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
         </div>
     </div>
 
-        <?php if ($showUser7Position) : ?>
+    <!-- ***************** footer *************** -->
+    <div id="footer-wrapper">
+        <div class="footer-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
+        <?php if ($showFooterPosition) : ?>
         <div class="grid-12">
-            <jdoc:include type="modules" name="user4" style="box" />
+            <jdoc:include type="modules" name="footer" style="box" />
         </div>
-        <div class="clear"></div>
         <?php endif; ?>
+        </div>
 	</div>
 </div>
 </body>
