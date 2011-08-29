@@ -13,7 +13,6 @@
 	<files>
     	<filename>index.html</filename>
     	<filename>index.php</filename>
-    	<filename>component.php</filename>
     	<filename>template_thumbnail.png</filename>
     	<filename>templateDetails.xml</filename>
     	<folder>images</folder>
@@ -31,6 +30,9 @@
         <position>user2</position>
         <position>user3</position>
         <position>user4</position>
+        <position>user5</position>
+        <position>user6</position>
+        <position>footer</position>
 	</positions>
 
 	<languages folder="language">
