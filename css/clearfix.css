@@ -1,0 +1,61 @@
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+html body div.clear,
+html body span.clear {
+     background: none;
+     border: 0;
+     clear: both;
+     display: block;
+     float: none;
+     font-size: 0;
+     margin: 0;
+     padding: 0;
+     position: static;
+     overflow: hidden;
+     visibility: hidden;
+     width: 0;
+     height: 0;
+}
+
+/* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
+
+.clearfix:after,
+ul.links:after,
+ul.menu:after,
+.clear-block:after
+{
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/*
+	The following zoom:1 rule is specifically for IE6 + IE7.
+	Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+* html .clearfix,
+* html ul.links,
+* html ul.menu,
+* html .clear-block,
+*:first-child+html .clearfix,
+*:first-child+html ul.links,
+*:first-child+html .clear-block
+{
+	zoom: 1;
+}
+
+/* Exclude inline links from clear-block behavior */
+ul.inline:after {
+  content: "";
+  display:none;
+  clear:none;
+}

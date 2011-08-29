@@ -13,11 +13,11 @@ $siteName	= $config->getValue('config.sitename');
 $showLeftPosition	= $this->countModules('left');
 $showRightPosition  = $this->countModules('right');
 $showTopPosition    = $this->countModules('top');
-$showUser1User2User3Positions = $this->countModules('user1 or user2 or user3');
-$showUser1Position  = $this->countModules('user1');
-$showUser2Position  = $this->countModules('user2');
-$showUser3Position  = $this->countModules('user3');
+$showUser4User5User5Positions = $this->countModules('user4 or user5 or user6');
 $showUser4Position  = $this->countModules('user4');
+$showUser5Position  = $this->countModules('user5');
+$showUser6Position  = $this->countModules('user6');
+$showUser7Position  = $this->countModules('user7');
 
 // Set Container and Grid to grid-12 or grid-16
 $GridContainer = 12;
@@ -45,71 +45,98 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
     <link rel="stylesheet" href="<?php echo $templatePath; ?>/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $templatePath; ?>/css/text.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $templatePath; ?>/css/960.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $templatePath; ?>/css/clearfix.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $templatePath; ?>/css/template_css.css" type="text/css" />
 </head>
 
 <body>
-	<div class="container-<?php echo $GridContainer; ?>">
-		<div class="grid-<?php echo $GridContainer; ?> header">
+<div id="page-wrapper" class="page">
+
+    <!-- ***************** top *************** -->
+    <?php if ($showTopPosition) : ?>
+    <div id="top-wrapper">
+        <div class="top-wrapper-inner container-<?php echo $GridContainer; ?> region clearfix">
+            <jdoc:include type="modules" name="top" style="box" />
+        </div>
+    </div>
+    <?php endif; ?>
+
+  <!-- ***************** header *************** -->
+    <div id="header-wrapper">
+        <div class="header-wrapper-inner container-<?php echo $GridContainer; ?> region header clearfix">
             <h1>
                 <?php echo $siteName; ?>
             </h1>
-		</div>
-        <div class="clear"></div>
+        </div>
+    </div>
 
-        <?php if ($showTopPosition) : ?>
-        <div class="grid-<?php echo $GridContainer; ?>">
-            <jdoc:include type="modules" name="top" style="box" />
+  <!-- ***************** topmenu *************** -->
+    <div id="topmenu-wrapper">
+        <div class="topmenu-wrapper-inner container-<?php echo $GridContainer; ?> region clearfix">
+            <jdoc:include type="modules" name="topmenu" style="box" />
         </div>
-        <div class="clear"></div>
-        <?php endif; ?>
+    </div>
 
-        <div class="grid-<?php echo $leftPositionWidth; ?>">
-            <jdoc:include type="modules" name="left" style="box" />
-        </div>
-        <div class="grid-<?php echo $componentWidth; ?>">
-            <jdoc:include type="message" />
-            <jdoc:include type="component" />
-        </div>
-        <?php if ($showRightPosition) : ?>
-        <div class="grid-<?php echo $rightPositionWidth; ?>">
-            <jdoc:include type="modules" name="right" style="box" />
-        </div>
-        <?php endif; ?>
-        <div class="clear"></div>
+  <!-- ***************** main *************** -->
+    <div id="main-wrapper">
+        <div class="main-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
 
-        <?php if ($showUser1User2User3Positions) : ?>
-        <div class="grid-4">
-            <?php if ($showUser1Position) : ?>
-            <jdoc:include type="modules" name="user1" style="box" />
-            <?php else : ?>
-            &nbsp;
+        <!-- ***************** left *************** -->
+            <div class="grid-<?php echo $leftPositionWidth; ?>">
+                <jdoc:include type="modules" name="left" style="box" />
+            </div>
+
+        <!-- ***************** content *************** -->
+            <div class="grid-<?php echo $componentWidth; ?>">
+                <jdoc:include type="message" />
+                <jdoc:include type="component" />
+            </div>
+
+        <!-- ***************** right *************** -->
+            <?php if ($showRightPosition) : ?>
+                <div class="grid-<?php echo $rightPositionWidth; ?>">
+                <jdoc:include type="modules" name="right" style="box" />
+            </div>
             <?php endif; ?>
         </div>
-        <div class="grid-4">
-            <?php if ($showUser2Position) : ?>
-            <jdoc:include type="modules" name="user2" style="box" />
-            <?php else : ?>
-            &nbsp;
-            <?php endif; ?>
-        </div>
-        <div class="grid-4">
-            <?php if ($showUser3Position) : ?>
-            <jdoc:include type="modules" name="user3" style="box" />
-            <?php else : ?>
-            &nbsp;
-            <?php endif; ?>
-        </div>
-        <div class="clear"></div>
-        <?php endif; ?>
+    </div>
 
-        <?php if ($showUser4Position) : ?>
+    <!-- ***************** user 4,5,6 *************** -->
+    <div id="user-wrapper">
+        <div class="user-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
+            <?php if ($showUser4User5User6Positions) : ?>
+            <div class="grid-4">
+                <?php if ($showUser4Position) : ?>
+                <jdoc:include type="modules" name="user1" style="box" />
+                <?php else : ?>
+                &nbsp;
+            <?php endif; ?>
+            </div>
+            <div class="grid-4">
+                <?php if ($showUser5Position) : ?>
+                <jdoc:include type="modules" name="user2" style="box" />
+                <?php else : ?>
+                &nbsp;
+                <?php endif; ?>
+            </div>
+            <div class="grid-4">
+                <?php if ($showUser6Position) : ?>
+                <jdoc:include type="modules" name="user3" style="box" />
+                <?php else : ?>
+                &nbsp;
+                <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+
+        <?php if ($showUser7Position) : ?>
         <div class="grid-12">
             <jdoc:include type="modules" name="user4" style="box" />
         </div>
         <div class="clear"></div>
         <?php endif; ?>
 	</div>
-
+</div>
 </body>
 </html>
