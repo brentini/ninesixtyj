@@ -83,24 +83,24 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
     </div>
 
   <!-- ***************** user 1,2,3 *************** -->
-    <div id="userbottom-wrapper">
-        <div class="userbottom-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
+    <div id="usertop-wrapper">
+        <div class="usertop-wrapper-inner container-<?php echo $GridContainer; ?> region clearfix">
             <?php if ($showUser1User2User3Positions) : ?>
-            <div class="grid-4">
+            <div class="grid-4 user-1">
                 <?php if ($showUser1Position) : ?>
                 <jdoc:include type="modules" name="user1" style="box" />
                 <?php else : ?>
                 &nbsp;
             <?php endif; ?>
             </div>
-            <div class="grid-4">
+            <div class="grid-4 user-2">
                 <?php if ($showUser2Position) : ?>
                 <jdoc:include type="modules" name="user2" style="box" />
                 <?php else : ?>
                 &nbsp;
                 <?php endif; ?>
             </div>
-            <div class="grid-4">
+            <div class="grid-4 user-3">
                 <?php if ($showUser3Position) : ?>
                 <jdoc:include type="modules" name="user3" style="box" />
                 <?php else : ?>
@@ -113,22 +113,22 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
 
   <!-- ***************** main *************** -->
     <div id="main-wrapper">
-        <div class="main-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
+        <div class="main-wrapper-inner container-<?php echo $GridContainer; ?> region clearfix">
 
         <!-- ***************** left *************** -->
-            <div class="grid-<?php echo $leftPositionWidth; ?>">
+            <div class="grid-<?php echo $leftPositionWidth; ?> left">
                 <jdoc:include type="modules" name="left" style="box" />
             </div>
 
         <!-- ***************** content *************** -->
-            <div class="grid-<?php echo $componentWidth; ?>">
+            <div class="grid-<?php echo $componentWidth; ?> content">
                 <jdoc:include type="message" />
                 <jdoc:include type="component" />
             </div>
 
         <!-- ***************** right *************** -->
             <?php if ($showRightPosition) : ?>
-                <div class="grid-<?php echo $rightPositionWidth; ?>">
+                <div class="grid-<?php echo $rightPositionWidth; ?> right">
                 <jdoc:include type="modules" name="right" style="box" />
             </div>
             <?php endif; ?>
@@ -137,23 +137,23 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
 
     <!-- ***************** user 4,5,6 *************** -->
     <div id="userbottom-wrapper">
-        <div class="userbottom-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
+        <div class="userbottom-wrapper-inner container-<?php echo $GridContainer; ?> region clearfix">
             <?php if ($showUser4User5User6Positions) : ?>
-            <div class="grid-4">
+            <div class="grid-4 user-4">
                 <?php if ($showUser4Position) : ?>
                 <jdoc:include type="modules" name="user4" style="box" />
                 <?php else : ?>
                 &nbsp;
             <?php endif; ?>
             </div>
-            <div class="grid-4">
+            <div class="grid-4 user-5">
                 <?php if ($showUser5Position) : ?>
                 <jdoc:include type="modules" name="user5" style="box" />
                 <?php else : ?>
                 &nbsp;
                 <?php endif; ?>
             </div>
-            <div class="grid-4">
+            <div class="grid-4 user-6">
                 <?php if ($showUser6Position) : ?>
                 <jdoc:include type="modules" name="user6" style="box" />
                 <?php else : ?>
@@ -166,9 +166,9 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
 
     <!-- ***************** footer *************** -->
     <div id="footer-wrapper">
-        <div class="footer-wrapper-inner container-<?php echo $GridContainer; ?> clearfix">
+        <div class="footer-wrapper-inner container-<?php echo $GridContainer; ?> region clearfix">
         <?php if ($showFooterPosition) : ?>
-        <div class="grid-12">
+        <div class="grid-12 footer">
             <jdoc:include type="modules" name="footer" style="box" />
         </div>
         <?php endif; ?>
