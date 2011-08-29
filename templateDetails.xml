@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="template" client="site" method="upgrade">
+	<name>ninesixtyj</name>
+	<creationDate>28/08/11</creationDate>
+	<author>Sven Ingo Wetsches</author>
+	<authorEmail>info@projektwaterkant.de</authorEmail>
+	<authorUrl>http://www.projektwaterkant.de</authorUrl>
+	<copyright>Projekt Waterkant Content Management Solutions UG (haftungsbeschränkt)</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.7.0</version>
+	<description>TPL_NINESIXTYJ_XML_DESCRIPTION</description>
+
+	<files>
+    	<filename>index.html</filename>
+    	<filename>index.php</filename>
+    	<filename>component.php</filename>
+    	<filename>template_thumbnail.png</filename>
+    	<filename>templateDetails.xml</filename>
+    	<folder>images</folder>
+    	<folder>css</folder>
+    	<folder>html</folder>
+		<folder>language</folder>
+ 	</files>
+
+	<positions>
+        <position>left</position>
+        <position>right</position>
+        <position>top</position>
+        <position>user1</position>
+        <position>user2</position>
+        <position>user3</position>
+        <position>user4</position>
+	</positions>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_ninesixtyj.ini</language>
+    	<language tag="en-GB">en-GB/en-GB.tpl_ninesixtyj.sys.ini</language>
+	</languages>
+
+</extension>

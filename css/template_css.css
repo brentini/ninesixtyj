@@ -1,0 +1,94 @@
+body {
+    margin-top: 1em;
+}
+
+.box, #system-message, blockquote {
+    background-color: #E4F3CE;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    margin-bottom: 1em;
+    padding: 0.2em;
+}
+
+#system-message dt.message {
+    display: none;
+}
+
+#system-message ul {
+    margin: 0;
+}
+
+#example_grid-12 {
+    background-image: url(../images/column.jpg);
+}
+
+#example_grid-16 {
+    background-image: url(../images/column_16.jpg);
+}
+
+.example_grid .grid-1 p,
+.example_grid .grid-2 p,
+.example_grid .grid-3 p,
+.example_grid .grid-4 p,
+.example_grid .grid-5 p,
+.example_grid .grid-6 p,
+.example_grid .grid-7 p,
+.example_grid .grid-8 p,
+.example_grid .grid-9 p,
+.example_grid .grid-10 p,
+.example_grid .grid-11 p,
+.example_grid .grid-12 p,
+.example_grid .grid-13 p,
+.example_grid .grid-14 p,
+.example_grid .grid-15 p,
+.example_grid .grid-16 p {
+    bborder: green solid 1px;
+    background-color: #E4F3CE;
+}
+
+.header {
+    background-color: black;
+    margin-bottom: 1em;
+    background-image: url(../images/header.png);
+    color: white;
+    -moz-border-radius:5px;
+    text-align:center;
+}
+
+.header h1 {
+    font-size: xx-large;
+    margin: 0;
+    padding: 0.5em;
+}
+
+.header p {
+    padding-bottom: 0.5em;
+    margin: 0;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+}
+
+.componentheading, .contentheading {
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+a {
+    color: green;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#current {
+    font-weight: bold;
+}
