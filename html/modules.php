@@ -36,22 +36,26 @@ function modChrome_container($module, &$params, &$attribs)
 		</div>
 	<?php endif;
 }
-function modChrome_bottommodule($module, &$params, &$attribs)
+function modChrome_box($module, &$params, &$attribs)
 {
 	if (!empty ($module->content)) : ?>
+        <div class="modulbox">
 		<?php if ($module->showtitle) : ?>
-			<h6><?php echo $module->title; ?></h6>
+			<h5><?php echo $module->title; ?></h5>
 		<?php endif; ?>
 		<?php echo $module->content; ?>
+        </div>
 	<?php endif;
 }
 function modChrome_sidebar($module, &$params, &$attribs)
 {
 	if (!empty ($module->content)) : ?>
+        <div class="modulbox">
 		<?php if ($module->showtitle) : ?>
 			<h3><?php echo $module->title; ?></h3>
 		<?php endif; ?>
 		<?php echo $module->content; ?>
+        </div>
 	<?php endif;
 }
 ?>

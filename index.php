@@ -122,6 +122,7 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
                 <jdoc:include type="modules" name="left" style="box" />
             </div>
 
+        
         <!-- ***************** content *************** -->
             <div class="grid-<?php echo $componentWidth; ?> content">
                 <jdoc:include type="message" />
