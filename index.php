@@ -79,7 +79,7 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
     <?php if ($showTopmenuPosition) : ?>
     <div id="topmenu-wrapper">
         <div class="topmenu-wrapper-inner container-<?php echo $GridContainer; ?> region clearfix">
-            <jdoc:include type="modules" name="topmenu" style="box" />
+            <jdoc:include type="modules" name="topmenu" style="container" />
         </div>
     </div>
     <?php endif; ?>
@@ -119,7 +119,7 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
 
         <!-- ***************** left *************** -->
             <div class="grid-<?php echo $leftPositionWidth; ?> left">
-                <jdoc:include type="modules" name="left" style="box" />
+                <jdoc:include type="modules" name="left" style="sidebar" />
             </div>
 
         
@@ -132,7 +132,7 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
         <!-- ***************** right *************** -->
             <?php if ($showRightPosition) : ?>
                 <div class="grid-<?php echo $rightPositionWidth; ?> right">
-                <jdoc:include type="modules" name="right" style="box" />
+                <jdoc:include type="modules" name="right" style="sidebar" />
             </div>
             <?php endif; ?>
         </div>
