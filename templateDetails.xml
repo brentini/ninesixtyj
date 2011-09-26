@@ -15,6 +15,7 @@
     	<filename>index.php</filename>
     	<filename>template_thumbnail.png</filename>
     	<filename>templateDetails.xml</filename>
+			<filename>favicon.ico</filename>
     	<folder>images</folder>
     	<folder>css</folder>
     	<folder>html</folder>
@@ -22,22 +23,22 @@
  	</files>
 
 	<positions>
-        <position>left</position>
-        <position>right</position>
-        <position>top</position>
-        <position>topmenu</position>
-        <position>user1</position>
-        <position>user2</position>
-        <position>user3</position>
-        <position>user4</position>
-        <position>user5</position>
-        <position>user6</position>
-        <position>footer</position>
+      <position>left</position>
+      <position>right</position>
+      <position>top</position>
+      <position>topmenu</position>
+      <position>user1</position>
+      <position>user2</position>
+      <position>user3</position>
+      <position>user4</position>
+      <position>user5</position>
+      <position>user6</position>
+      <position>footer</position>
 	</positions>
 
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.tpl_ninesixtyj.ini</language>
-    	<language tag="en-GB">en-GB/en-GB.tpl_ninesixtyj.sys.ini</language>
+			<language tag="en-GB">en-GB/en-GB.tpl_ninesixtyj.ini</language>
+   		<language tag="en-GB">en-GB/en-GB.tpl_ninesixtyj.sys.ini</language>
 	</languages>
 
 </extension>
