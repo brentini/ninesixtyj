@@ -6,7 +6,7 @@
 	<authorEmail>info@projektwaterkant.de</authorEmail>
 	<authorUrl>http://www.projektwaterkant.de</authorUrl>
 	<copyright>Projekt Waterkant Content Management Solutions UG (haftungsbeschränkt)</copyright>
-	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<license>GNU General Public License version 2 or later and MIT; see folder LICENSES</license>
 	<version>1.7.0</version>
 	<description>TPL_NINESIXTYJ_XML_DESCRIPTION</description>
 
@@ -19,6 +19,7 @@
     	<folder>images</folder>
     	<folder>css</folder>
     	<folder>html</folder>
+			<folder>licenses</folder>
 		<folder>language</folder>
  	</files>
 
