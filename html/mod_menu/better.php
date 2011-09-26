@@ -19,28 +19,28 @@
  * to work and deal with:
  *	$module			stdClass Object of the Module itself
  *					->params in JSON format
- *	$attribs		assoc array with all attributes from <jdoc:load .../>
+ *	$attribs		assoc array with the attribute from <jdoc:load .../>
  *
  *	$params 		JRegistry version of $Module->params
  * 	$class_sfx		value of that module parameter
  *	$showAll		integer value of that menu item paramater: 0|1 show subitems
  *
- * 	$list			array version of the current menu (@see $menu)
- * 					often a huge list so beware of var_dump()ing it :)
- *	$active			stdClass representing the active menu item only
- *	$active_id		UINT, same as $active->id (Itemid)
- *	$path 			array depicting the nesting level of the $active menu item
+ * 	$list			Array version of the current menu (@see $menu)
+ * 					often a massice huge list so beware of var_dump()ing it :)
+ *	$active			stdClass representing the active menu item
+ *	$active_id		same as $active->id (Itemid)
+ *	$path 			array depicting the nesting level of the current menu item
  *
- * 	$app			JSite instance
+ * 	$app			JSite or JAdmin depends on where we are
  * 	$lang 			JLanguage instance
  * 	$menu			JMenuSite instance of the WHOLE menu
  *	$scope			previous application scope, but usually an empty string
- *	$option			active component name incl. com_
+ *	$option			current component name incl. com_
  *	$chrome			this file's path
  *	$content		comes in as an empty string and might be deprecated;
- *					Eventually represents the module's "output". No need to set
- * 					this manually here unless you want to discard the default output
- *					of this layout and return any other 'content'. utterly weired...
+ *					represents the "output" of a module layout and if not
+ *					empty after rendering a Layout will discard that rendered
+ *					content and use $content instead. somwhat weired...
  *
  * @package     Template
  * @subpackage  HTML
@@ -70,6 +70,11 @@ JLoader::register('SearchHelper', JPATH_ADMINISTRATOR .'/components/com_search/h
 // unordered list
 $elt = 'ul';
 $ol_types = array();
+
+// no active menu item, use default (home)
+if (!$active) {
+	$active = JFactory::getApplication()->getMenu()->getDefault();
+}
 
 // ordered list requested?
 if ( preg_match('#(?:[_|-](ordered|ol))#iu', $class_sfx, $settings) )
