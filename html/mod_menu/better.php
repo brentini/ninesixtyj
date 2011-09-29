@@ -19,7 +19,7 @@
  * to work and deal with:
  *	$module			stdClass Object of the Module itself
  *					->params in JSON format
- *	$attribs		assoc array with the attribute from <jdoc:load .../>
+ *	$attribs		assoc array with all attributes from <jdoc:load .../>
  *
  *	$params 		JRegistry version of $Module->params
  * 	$class_sfx		value of that module parameter
@@ -31,16 +31,16 @@
  *	$active_id		same as $active->id (Itemid)
  *	$path 			array depicting the nesting level of the current menu item
  *
- * 	$app			JSite or JAdmin depends on where we are
+ * 	$app			JSite instance
  * 	$lang 			JLanguage instance
  * 	$menu			JMenuSite instance of the WHOLE menu
  *	$scope			previous application scope, but usually an empty string
- *	$option			current component name incl. com_
+ *	$option			active component name incl. com_
  *	$chrome			this file's path
  *	$content		comes in as an empty string and might be deprecated;
- *					represents the "output" of a module layout and if not
- *					empty after rendering a Layout will discard that rendered
- *					content and use $content instead. somwhat weired...
+ *					Eventually represents the module's "output". No need to set
+ *					this manually here unless you want to discard the default output
+ *					of this layout and return any other 'content'. utterly weired...
  *
  * @package     Template
  * @subpackage  HTML
