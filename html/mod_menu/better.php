@@ -165,21 +165,21 @@ foreach ($list as $i => &$item) :
 	// @todo test if JLanguage was patched to contain getSingular()
 	// @todo test if Localise::INFLECTION is true
 	// even if it proxies, singularization is fine for this
-	if ($item->language == 'de-DE' || $locale == 'de-DE') {
-		if ( method_exists('de_DELocalise', 'singularize') ) {
-			$alias = de_DELocalise::singularize($alias);
+	if ($item->language == 'de-DE' || ($item->language == '*' && $locale == 'de-DE') ) {
+		if ( method_exists('de_DELocalise', 'singularise') ) {
+			$alias = de_DELocalise::singularise($alias);
 		}
 	}
 	// fall back for english
-	elseif ($item->language == 'en-GB' || $locale == 'en-GB') {
-		if ( method_exists('en_GBLocalise', 'singularize') ) {
-			$alias = en_GBLocalise::singularize($alias);
+	elseif ($item->language == 'en-GB' || ($item->language == '*' && $locale == 'en-GB') ) {
+		if ( method_exists('en_GBLocalise', 'singularise') ) {
+			$alias = en_GBLocalise::singularise($alias);
 		}
 	}
 	else {
 		// @todo do some smart check for other xx-XXLocalise classes
-		if ( method_exists('en_GBLocalise', 'singularize') ) {
-			$alias = en_GBLocalise::singularize($alias);
+		if ( method_exists('en_GBLocalise', 'singularise') ) {
+			$alias = en_GBLocalise::singularise($alias);
 		}
 	}
 
