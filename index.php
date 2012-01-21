@@ -49,7 +49,7 @@ if ($showRightPosition) {
 $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
 	<jdoc:include type="head" />
@@ -58,6 +58,9 @@ $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
     <link rel="stylesheet" href="<?php echo $templatePath; ?>/css/960.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $templatePath; ?>/css/clearfix.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $templatePath; ?>/css/template_css.css" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 
 <body>
