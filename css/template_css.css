@@ -4,8 +4,8 @@ body {
 
 .box, #system-message, blockquote {
     background-color: #E4F3CE;
-    -moz-border-radius:5px;
-    border-radius:5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     margin-bottom: 1em;
     padding: 0.2em;
 }
@@ -18,41 +18,13 @@ body {
     margin: 0;
 }
 
-#example_grid-12 {
-    background-image: url(../images/column.jpg);
-}
-
-#example_grid-16 {
-    background-image: url(../images/column_16.jpg);
-}
-
-.example_grid .grid-1 p,
-.example_grid .grid-2 p,
-.example_grid .grid-3 p,
-.example_grid .grid-4 p,
-.example_grid .grid-5 p,
-.example_grid .grid-6 p,
-.example_grid .grid-7 p,
-.example_grid .grid-8 p,
-.example_grid .grid-9 p,
-.example_grid .grid-10 p,
-.example_grid .grid-11 p,
-.example_grid .grid-12 p,
-.example_grid .grid-13 p,
-.example_grid .grid-14 p,
-.example_grid .grid-15 p,
-.example_grid .grid-16 p {
-    bborder: green solid 1px;
-    background-color: #E4F3CE;
-}
-
 .header {
     background-color: black;
     margin-bottom: 1em;
     background-image: url(../images/header.png);
     color: white;
-    -moz-border-radius:5px;
-    text-align:center;
+    -moz-border-radius: 5px;
+    text-align: center;
 }
 
 .header h1 {
@@ -72,8 +44,8 @@ body {
 }
 
 .componentheading, .contentheading {
-    font-size:25px;
-    margin-bottom:20px;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 a {
@@ -91,4 +63,78 @@ a:hover {
 
 #current {
     font-weight: bold;
+}
+
+/* ++++++++++++++  blog  ++++++++++++++ */
+
+.cols-1 {
+    display: block;
+    float: none !important;
+    margin: 0 !important;
+}
+
+.cols-2 .row-1.odd {
+    width: 46%;
+    float: left;
+}
+
+.cols-2 .row-2.even {
+    width: 46%;
+    float: right;
+    margin: 0
+}
+
+.cols-2 .row-2.odd {
+    width: 46%;
+    float: left;
+}
+
+.cols-2 .row-3.odd {
+    width: 46%;
+    float: right;
+}
+
+.cols-3  .row-1.odd {
+    float: left;
+    width: 29%;
+    padding: 0px 5px;
+    margin-right: 4%
+
+}
+
+.cols-3 .row-2.even {
+    float: left;
+    width: 29%;
+    margin-left: 0;
+    padding: 0px 5px
+}
+
+.cols-3 .row-2.odd {
+    float: right;
+    width: 29%;
+    padding: 0px 5px
+}
+
+.items-row {
+    overflow: hidden;
+    margin-bottom: 10px !important;
+}
+
+.column-1,
+.column-2,
+.column-3 {
+    padding: 10px 5px
+}
+
+.column-2 {
+    width: 55%;
+    margin-left: 40%;
+}
+
+.column-3 {
+    width: 30%
+}
+
+.blog-more {
+    padding: 10px 5px
 }
