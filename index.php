@@ -31,19 +31,19 @@ $showUser6Position  = $this->countModules('user6');
 $showFooterPosition  = $this->countModules('footer');
 
 // Set Container and Grid to grid-12 or grid-16
-$GridContainer = 12;
+$GridContainer = $this->params->get('grid');
 
 // defaults
 $leftPositionWidth = $rightPositionWidth = 0;
 // calculate column widths of positions left, component and right
 if ($showLeftPosition) {
 	// Set the Grid to show left Position if countModules = TRUE
-	$leftPositionWidth  = 2;
+	$leftPositionWidth  = $this->params->get('gridfirst');
 }
 
 if ($showRightPosition) {
 	// Set the Grid to show right Position if countModules = TRUE
-	$rightPositionWidth  = 2;
+	$rightPositionWidth  = $this->params->get('gridsecond');
 }
 
 $componentWidth     = $GridContainer - $leftPositionWidth - $rightPositionWidth;
