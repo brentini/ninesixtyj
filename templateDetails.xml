@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="template" client="site" method="upgrade">
+    <name>ninesixtyj</name>
+    <creationDate>01/2012</creationDate>
+    <author>Sven Ingo Wetsches</author>
+    <authorEmail>kontakt@projektwaterkant.de</authorEmail>
+    <authorUrl>http://www.projektwaterkant.de</authorUrl>
+    <copyright>Projekt Waterkant Content Management Solutions UG (haftungsbeschränkt)</copyright>
+    <license>GNU General Public License version 2 or later and MIT; see folder LICENSES</license>
+    <version>2.0</version>
+    <description>TPL_NINESIXTYJ_XML_DESCRIPTION</description>
+
+    <files>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>favicon.ico</filename>
+        <folder>images</folder>
+        <folder>css</folder>
+        <folder>html</folder>
+        <folder>licenses</folder>
+        <folder>language</folder>
+    </files>
+
+    <positions>
+        <position>left</position>
+        <position>right</position>
+        <position>top</position>
+        <position>topmenu</position>
+        <position>user1</position>
+        <position>user2</position>
+        <position>user3</position>
+        <position>user4</position>
+        <position>user5</position>
+        <position>user6</position>
+        <position>footer</position>
+    </positions>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_ninesixtyj.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_ninesixtyj.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field name="grid" type="list" default="12"
+                       label="TPL_NINESIXTYJ_FIELD_CONTAINER_LABEL"
+                       description="TPL_NINESIXTYJ_FIELD_CONTAINER_DESC"
+                       filter="integer"
+                        >
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                </field>
+                <field name="gridfirst" type="list" default="3"
+                       label="TPL_NINESIXTYJ_FIELD_GRIDFIRST_LABEL"
+                       description="TPL_NINESIXTYJ_FIELD_GRIDFIRST_DESC"
+                       filter="integer"
+                        >
+                    <option value="2">Grid-2</option>
+                    <option value="3">Grid-3</option>
+                    <option value="4">Grid-4</option>
+                </field>
+                <field name="gridsecond" type="list" default="3"
+                       label="TPL_NINESIXTYJ_FIELD_GRIDSECOND_LABEL"
+                       description="TPL_NINESIXTYJ_FIELD_GRIDSECOND_DESC"
+                       filter="integer"
+                        >
+                    <option value="2">Grid-2</option>
+                    <option value="3">Grid-3</option>
+                    <option value="4">Grid-4</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
